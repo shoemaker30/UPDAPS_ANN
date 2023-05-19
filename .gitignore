@@ -1,0 +1,9 @@
+# ignore uploading directories of training and testing data to GitHub since the directories are very large
+surf_2/
+surf_5/
+surf_6/
+surf_7/
+
+# ignore climate and traffic files since the directories are very large
+processed_climte/
+processed_traffic/
