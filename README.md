@@ -40,23 +40,7 @@ These folders contain a small sample of training and testing data for pavement o
 #### UPDAPS Prediction Model
 # Prediction and Training Operations
 
-**See */documentation/usage_example.ipynb* for an example run of these procedures.**
-
-This markdown explains the prediction and training processes used for the UPDAPS prediction models. Both of these processes are handled by the *PredictionModel* class located in *prediction_model.py*. The flow of both processes can be described in 3 parts: 
-1. Preprocessing
-2. Ann Predictions
-3. Manual Calculations
-
-### Preprocessing
-The preprocessing phase transforms an HPMS input file into an input vector suitable to be input into an ANN. An HPMS file for this project must be of type *.JSON* and must follow the naming convention.
-
-Convention: `<StateAbbr><ProjectID>_S<SurfaceType>B<BaseType>_st<StateCode><FunctionalSystem>-Python-output.json`
-
-Example file name: `AL1685_S5B2_st1fs1-Python-output.json`
-
-First, a *Pavement* object is instantiated. The constructor receives the file path to an HPMS file, and some classification data (surface type, funtional class, etc.) is extracted and saved as fields in the *Pavement* object. 
-
-Using functions in the *Pavement* class, all needed data is extracted and scaled into the range 0,1 by calling the `get_monthly_vectors(distress=<distresses> scaled=<True>)`. Two 2D lists are returned. 
+This markdown explains the prediction and training processes used for the UPDAPS prediction models. Both of these processes are handled by the *PredictionModel* class located in *prediction_model.py*. **See *usage_example.py* for an example run of these procedures.**
 
 #### How the Pavement Class is used 
 
